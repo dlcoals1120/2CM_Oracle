@@ -1,0 +1,50 @@
+-- DDL
+COMMIT;
+-- DATA Definition 데이터 정의어
+-- 오라클의 객체 생성, 수정, 삭제하는 명령어, 명령어의 종류로는
+-- CREATE, ATER, DROP, TRUNCATE
+
+COMMENT ON COLUMN EMPLOYEE.NAME IS '사원명';
+COMMENT ON COLUMN EMPLOYEE.T_CODE IS '직급코드';
+COMMENT ON COLUMN EMPLOYEE.D_CODE IS '부서코드';
+COMMENT ON COLUMN EMPLOYEE.AGE IS '나이';
+
+DESC EMPLOYEE;
+
+DESC USER_UNIQUE;
+
+DESC SHOP_MEMBER;
+
+DESC SHOP_BUY;
+
+-- 테이블을 보고 테이블을 만들 수 있는지 중요~~
+
+-- 계정을 만들어주세요
+-- 접속정보(ID/PW) : KH / KH
+-- 접속권한, 생성권한 부여
+-- SYSTEM RED
+CREATE USER KH IDENTIFIED BY KH;
+GRANT CONNECT, RESOURCE TO KH;
+
+-- kh violet
+-- ALTER (오라클 객체)
+-- ALTER를 이용한 제약조건 추가, 수정, 이름변경
+-- ALTER를 이용한 컴럼추가, 컬럼데이터 타입 수정, 컬럼명 수정, 컬럼 삭제, 테이블명 수정
+SELECT * FROM USER_CONSTRAINTS WHERE TABLE_NAME = 'EMPLOYEE';
+SELECT * FROM USER_CONSTRAINTS WHERE TABLE_NAME = 'DEPARTMENT';
+-- ** CONSTRAINTS TYPE
+-- P : PRIMARY KEY
+-- R(F) : FOREIGN KEY
+-- C : CHECK OR NOT NULL
+-- U : UNIQUE
+
+
+
+
+
+
+
+
+
+
+
